@@ -11,16 +11,17 @@ export const LocationList = () => {
   },[])// eslint-disable-line react-hooks/exhaustive-deps
   
   return (
-    <>
-      <h2>Locations</h2>
+ 
       <div className="locations">
+        {console.log("happy birthday", locations)}
         {
+        
           locations.map(l => {
             
             return <LocationCard key={l.id} location={l}/>
           })
         }
       </div>
-    </>
+    
   )
 }

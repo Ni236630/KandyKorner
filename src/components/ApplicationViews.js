@@ -1,13 +1,16 @@
-import React from 'react'
-import { Route } from 'react-router-dom'
-import { KandyKorner } from './KandyKorner'
-import { LocationsProvider } from './locations/LocationsProvider'
-import { LocationList } from './locations/LocationList'
-
+import React from "react"
+import { Route } from "react-router-dom"
+import { LocationProvider } from "./locations/LocationsProvider"
+import { LocationList } from "./locations/LocationList"
 
 export const ApplicationViews = () => {
-  return (
-    
-    
-  )
+    return (
+        <>
+            <LocationProvider>    
+                <Route exact path="/">
+                    <LocationList />
+                </Route>
+            </LocationProvider>
+        </>
+    )
 }
